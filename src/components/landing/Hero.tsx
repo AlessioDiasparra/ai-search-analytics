@@ -15,9 +15,9 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
+          className="text-balance text-4xl tracking-tight sm:text-5xl md:text-6xl"
         >
-          <span className="italic" style={{ fontFamily: "'Playfair Display', serif" }}>AI Search Analytics</span> for Marketing Teams
+          <span className="italic" style={{ fontFamily: "'Playfair Display', serif" }}>AI Search</span> Analytics for Marketing Teams
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
