@@ -66,6 +66,7 @@ const plans = [
     ],
     cta: "Get Started",
     ctaVariant: "outline",
+    badge: "",
   },
   {
     title: "Professional",
@@ -101,6 +102,7 @@ const plans = [
     ],
     cta: "Contact Sales",
     ctaVariant: "secondary",
+    badge: "",
   },
 ] as const;
 
