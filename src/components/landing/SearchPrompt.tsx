@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowDownLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const SearchPrompt = () => {
@@ -11,17 +11,24 @@ export const SearchPrompt = () => {
       transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
       className="mt-6 flex justify-center"
     >
-      <div className="group relative w-full max-w-2xl">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-        <div className="relative flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#0a1f3d] to-[#0d2847] rounded-full border border-white/10 shadow-2xl">
-          <span className="flex-1 text-lg text-white/90 font-medium">
+      <div className="group relative w-full max-w-3xl">
+        <div className="relative flex items-center justify-between gap-4 px-8 py-5 bg-white dark:bg-card rounded-full border border-border shadow-lg hover:shadow-xl transition-shadow">
+          <span 
+            className="flex-1 text-3xl text-foreground"
+            style={{ 
+              fontFamily: "'Playfair Display', serif",
+              fontStyle: "italic",
+              fontWeight: 400
+            }}
+          >
             How do you get discovered in AI search?
           </span>
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
-            <ArrowRight className="h-5 w-5 text-white" />
+          <div className="flex items-center justify-center w-8 h-8 rounded-full">
+            <ArrowDownLeft className="h-6 w-6 text-foreground/60" />
           </div>
         </div>
       </div>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
     </motion.div>
   );
 };
