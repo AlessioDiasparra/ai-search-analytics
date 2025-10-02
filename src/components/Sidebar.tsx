@@ -4,12 +4,15 @@ import { usePathname, useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { authClient, useSession } from "@/lib/auth-client"
-import { Home, Users, User, KeyRound, ChevronLeft, ChevronRight } from "lucide-react"
+import { Home, Users, User, KeyRound, ChevronLeft, ChevronRight, Database, Brain, TrendingUp } from "lucide-react"
 import * as React from "react"
 
 const NAV = [
-  { href: "/dashboard", label: "Dashboard", icon: Home },
+  { href: "/project", label: "Project", icon: Home },
   { href: "/leads", label: "Tracked Prompts", icon: Users },
+  { href: "/sources", label: "Sources", icon: Database },
+  { href: "/models", label: "Models", icon: Brain },
+  { href: "/competitors", label: "Competitors", icon: TrendingUp },
   { href: "/profile", label: "Profile", icon: User },
   { href: "/settings/api-keys", label: "API Keys", icon: KeyRound },
 ]
@@ -89,7 +92,7 @@ export default function Sidebar() {
     >
       {/* Brand row */}
       <div className="flex items-center justify-between gap-2 px-2 py-1.5">
-        <Link href="/dashboard" className={cn("flex items-center gap-2 min-w-0", collapsed && "sr-only")}>
+        <Link href="/project" className={cn("flex items-center gap-2 min-w-0", collapsed && "sr-only")}>
           <span className="font-semibold text-lg truncate">Pixrid</span>
         </Link>
         <div className="flex items-center gap-1">

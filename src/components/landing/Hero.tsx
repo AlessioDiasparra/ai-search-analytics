@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { SearchPrompt } from "./SearchPrompt";
 
 export const Hero = () => {
   return (
@@ -38,6 +39,8 @@ export const Hero = () => {
             <Link href="/sign-in">Sign in</Link>
           </Button>
         </motion.div>
+        
+        <SearchPrompt />
       </div>
     </section>
   );
