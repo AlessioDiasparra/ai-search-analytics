@@ -10,13 +10,14 @@ export const Hero = () => {
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,_rgba(0,0,0,0.06),_transparent_60%)] dark:bg-[radial-gradient(60%_60%_at_50%_0%,_rgba(255,255,255,0.06),_transparent_60%)]" />
       <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28 text-center">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
         >
-          AI Search Analytics for <em className="italic">Marketing Teams</em>
+          <span className="italic" style={{ fontFamily: "'Playfair Display', serif" }}>AI Search Analytics</span> for Marketing Teams
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
