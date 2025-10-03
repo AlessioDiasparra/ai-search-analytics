@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useRouter } from "next/navigation"
 import { authClient, useSession } from "@/lib/auth-client"
-import Sidebar from "@/components/Sidebar"
 
 export default function ProfilePage() {
   const { data: session, isPending, refetch } = useSession()
@@ -36,40 +35,38 @@ export default function ProfilePage() {
   if (isPending) return <div className="p-4">Loading...</div>
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-[256px_1fr]">
-      <Sidebar />
-      <main className="p-4 md:p-6 grid gap-4 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Profile</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div>
-              <label className="text-sm text-muted-foreground">Email</label>
-              <Input value={session?.user?.email || ""} readOnly />
-            </div>
-            <div>
-              <label className="text-sm text-muted-foreground">Name</label>
-              <Input value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
-            <div>
-              <label className="text-sm text-muted-foreground">Image URL</label>
-              <Input value={image} onChange={(e) => setImage(e.target.value)} placeholder="https://..." />
-            </div>
-            <Button onClick={handleSignOut} variant="destructive">Sign out</Button>
-          </CardContent>
-        </Card>
+    // Remove the grid and Sidebar since AppShell already provides these
+    <main className="p-4 md:p-6 grid gap-4 lg:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardTitle>Profile</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <div>
+            <label className="text-sm text-muted-foreground">Email</label>
+            <Input value={session?.user?.email || ""} readOnly />
+          </div>
+          <div>
+            <label className="text-sm text-muted-foreground">Name</label>
+            <Input value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div>
+            <label className="text-sm text-muted-foreground">Image URL</label>
+            <Input value={image} onChange={(e) => setImage(e.target.value)} placeholder="https://..." />
+          </div>
+          <Button onClick={handleSignOut} variant="destructive">Sign out</Button>
+        </CardContent>
+      </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Session</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm space-y-2">
-            <div>User ID: {session?.user?.id}</div>
-            <div>Authenticated: {session?.user ? "Yes" : "No"}</div>
-          </CardContent>
-        </Card>
-      </main>
-    </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Session</CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm space-y-2">
+          <div>User ID: {session?.user?.id}</div>
+          <div>Authenticated: {session?.user ? "Yes" : "No"}</div>
+        </CardContent>
+      </Card>
+    </main>
   )
 }

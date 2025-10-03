@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import AppShell from "@/components/AppShell";
 
 export const metadata: Metadata = {
-  title: "Lovable for Sales",
+  title: "AI Search Analytics",
   description: "Orchestrated AI prospecting platform with intelligent enrichment, Notion-style UI, and team-ready authentication.",
 };
 
