@@ -13,15 +13,17 @@ export const SearchPrompt = () => {
     >
       <div className="group relative w-full max-w-3xl">
         <div className="relative flex items-center justify-between gap-4 px-8 py-5 bg-white dark:bg-card rounded-full border border-border shadow-lg hover:shadow-xl transition-shadow">
-          <span 
-            className="flex-1 text-3xl text-foreground"
-            style={{ 
-              fontFamily: "'Playfair Display', serif",
-              fontStyle: "italic",
-              fontWeight: 400
-            }}
-          >
-            How do you get discovered in AI search?
+          <span className="flex-1 text-3xl text-foreground">
+            How do you get discovered in{" "}
+            <span
+              style={{ 
+                fontFamily: "'Playfair Display', serif",
+                fontStyle: "italic",
+                fontWeight: 400
+              }}
+            >
+              AI search?
+            </span>
           </span>
           <div className="flex items-center justify-center w-8 h-8 rounded-full">
             <ArrowDownLeft className="h-6 w-6 text-foreground/60" />
