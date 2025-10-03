@@ -23,7 +23,7 @@ export default function SignInPage() {
       email,
       password,
       rememberMe,
-      callbackURL: "/dashboard",
+      callbackURL: "/project",
     })
     setLoading(false)
     if (error?.code) {
@@ -31,7 +31,7 @@ export default function SignInPage() {
       return
     }
     toast.success("Welcome back!")
-    router.push("/dashboard")
+    router.push("/project")
   }
 
   return (
