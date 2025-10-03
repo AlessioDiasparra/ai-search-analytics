@@ -3,7 +3,7 @@ import ScrapingTools from "@/components/landing/ScrapingTools";
 import PreviewTable from "@/components/landing/PreviewTable";
 import { AnimatedPrompts } from "@/components/landing/AnimatedPrompts";
 import { FloatingSectionNav } from "@/components/landing/FloatingSectionNav";
-import { Testimonials } from "@/components/landing/Testimonials";
+import { AISearchFeatures } from "@/components/landing/AISearchFeatures";
 import { Pricing } from "@/components/landing/Pricing";
 import { Footer } from "@/components/landing/Footer";
 
@@ -23,7 +23,7 @@ export default function Home() {
         <PreviewTable />
       </section>
 
-      <Testimonials />
+      <AISearchFeatures />
       <Pricing />
       <Footer />
     </main>
