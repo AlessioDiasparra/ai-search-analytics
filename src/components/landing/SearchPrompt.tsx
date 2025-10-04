@@ -25,7 +25,7 @@ export const SearchPrompt = () => {
               AI search?
             </span>
           </span>
-          <div className='flex items-center justify-center w-8 h-8 rounded-full'>
+          <div className='flex items-center justify-center w-4 h-4 rounded-full'>
             <Search className='h-6 w-6 text-foreground/60' />
           </div>
         </div>

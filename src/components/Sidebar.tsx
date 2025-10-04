@@ -9,7 +9,7 @@ import * as React from "react"
 
 const NAV = [
   { href: "/project", label: "Project", icon: Home },
-  { href: "/leads", label: "Tracked Prompts", icon: Users },
+  { href: "/prompts", label: "Tracked Prompts", icon: Users },
   { href: "/sources", label: "Sources", icon: Database },
   { href: "/models", label: "Models", icon: Brain },
   { href: "/competitors", label: "Competitors", icon: TrendingUp },
