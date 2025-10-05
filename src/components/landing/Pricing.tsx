@@ -16,7 +16,7 @@ export const Pricing = () => {
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {plans.map((p, i) => (
           <div key={i} className="relative rounded-2xl border bg-card p-6 shadow-sm">
-            {p.badge && (
+            {'badge' in p && p.badge && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border bg-background px-3 py-1 text-xs font-medium shadow-sm">
                 {p.badge}
               </div>
@@ -54,17 +54,15 @@ export const Pricing = () => {
 const plans = [
   {
     title: "Starter",
-    price: "Free",
+    price: "€59/month",
     period: "",
     subtitle: "Perfect for small teams getting started",
     features: [
-      "Access to ChatGPT, Perplexity, and AIO",
-      "Track up to 25 prompts",
-      "Prompts run across models on a daily interval",
-      "Up to 2250 AI answers analyzed per month",
-      "Access to 3 countries",
-      "Unlimited seats",
-      "Email Support",
+      "1 website",
+      "5 competitor tracking",
+      "50 prompt simulations/ 6000 answers",
+      "3 AI Platforms (ChatGPT, Perplexity, Google AI, Grok, Copilot, Meta)",
+      "Email alerts"
     ],
     cta: "Get Started",
     ctaVariant: "outline",
@@ -72,34 +70,34 @@ const plans = [
   {
     title: "Professional",
     badge: "Most Popular",
-    price: "$99",
-    period: "per month",
+    price: "€149/month",
+    period: "",
     subtitle: "For growing teams with higher volumes",
     features: [
-      "Access to ChatGPT, Perplexity, and AIO",
-      "Track up to 100 prompts",
-      "Prompts run across models on a daily interval",
-      "Up to 9000 AI answers analyzed per month",
-      "Access to 5 countries",
-      "Unlimited seats",
-      "Email + Slack Support",
+      "2 websites",
+      "15 competitor tracking",
+      "150 prompt simulations",
+      "3 AI Platforms (ChatGPT, Perplexity, Google AI)",
+      "Content optimization",
+      "2 seats",
+      "Email alerts",
     ],
     cta: "Start 14-day trial",
     ctaVariant: "default",
   },
   {
-    title: "Enterprise",
-    price: "Custom",
+    title: "Business",
+    price: "349/month",
     period: "",
     subtitle: "For large organizations with complex needs",
     features: [
-      "Access to ChatGPT, Perplexity, and AIO",
+      "5 websites",
+      "30 competitor tracking",
       "Track 300+ prompts",
-      "Prompts run across models on a daily interval",
-      "27000+ AI answers analyzed per month",
-      "Access to over 10 countries",
-      "Unlimited seats",
-      "Dedicated Account Rep",
+      "All platforms (ChatGPT, Perplexity, Google AI, Grok, Copilot, Meta, Claude, Deepseek, Qwen)",
+      "Content optimization",
+      "5 seats",
+      "Email alerts",
     ],
     cta: "Contact Sales",
     ctaVariant: "secondary",
